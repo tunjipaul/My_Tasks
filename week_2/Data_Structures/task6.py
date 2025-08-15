@@ -18,6 +18,7 @@
 #task3 simuate a football match ticket system
 #store all seat numbers using a variable.
 seat_numbers = {x for x in range(1,51)}
+seat_numbers = ()
 booking_number = int(input("Book a seat number from 1- 50: "))
 
 
