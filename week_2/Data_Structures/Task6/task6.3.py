@@ -1,0 +1,5 @@
+seat = set(range(1,51))
+print(seat)
+booking_seat = int(input("Book a seat: "))
+removed_seats = seat.discard(booking_seat)
+print(f"Remaining Seats: {seat}")
