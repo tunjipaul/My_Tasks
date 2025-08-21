@@ -200,25 +200,74 @@
 #                     #writing code structure (to fill in later).
 
  # try and think through this.
-while True:
-    print("\nMenu,Pick an Option:")
-    print("1.Say Hello")
-    print("2. Say Goodbye")
-    print("3. Exit")
+# while True:
+#     print("\nMenu,Pick an Option:")
+#     print("1.Say Hello")
+#     print("2. Say Goodbye")
+#     print("3. Exit")
 
-    choice = (input("Choose an option: ").strip())
-    if choice == "1":
-        print("Hello")
-        break
-    elif choice == "2":
-        print("Goodbye")
-        break
-    elif choice == "3":
-        print("Exiting Program...")
-        break
-    else:
-        print("Invalid Choice. Try Again.")
+#     choice = (input("Choose an option: ").strip())
+#     if choice == "1":
+#         print("Hello")
+#         break
+#     elif choice == "2":
+#         print("Goodbye")
+#         break
+#     elif choice == "3":
+#         print("Exiting Program...")
+#         break
+#     else:
+#         print("Invalid Choice. Try Again.")
+#         break #break here is to end the program, because in this scenario it is a loop that doesn't end.
+       
         #while true needs a break statement to stop.
         #how does the loop end with any thing either than the options in choice
         
+#try and use while true for validation.
 
+# while True:
+#     age = input("Enter your age: ")
+
+#     if age.isdigit():
+#         print(f"Your age is {age}")
+#         break
+#     else:
+#         print("Invalid Input. Please enter your number.")
+
+#         #lets make a guess.
+
+# secret = "python"
+# while True:
+#      guess = input("guess the secret word: ").strip()
+#      if guess.lower() == secret:
+#          print("Correct! You guessed the word.")
+#          break
+#      else:
+#          print("wrong! try again.")
+
+               
+               
+                #do you remember this?
+
+balance = 1000
+while True:
+    print("\nATM Menu:")
+    print("1. Check Balance")
+    print("2. Withdraw")
+    print("3. Exit")
+
+    choice = input("Enter Choice: ")
+    if choice == "1":
+        print(f"your balance is: {balance}")
+    elif choice == "2":
+        amount = int(input("How much do you want to withdraw: "))
+        if amount <= balance:
+            balance -= amount
+            print(f"Withdrawal Successful;. New balance: {balance}")
+        else:
+            print("Insufficient Funds.")
+    elif choice == "3":
+        print("Thank you for using our ATM. Goodbye!")
+        break
+    else:
+     print("Invalid option, Try again.")
