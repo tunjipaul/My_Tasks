@@ -80,3 +80,61 @@
 #your height in meters - float.
 #your name - string.
 
+# #transport fare calculator
+# transport_fare ={
+#     "distance": float(input("how far did you go: ").strip()),
+#     "fare": float(input("how much per distance: ").strip())
+# }
+
+# total_transport_fare = transport_fare["distance"] * transport_fare["fare"]
+
+
+# print(f"your transport fare is N{total_transport_fare:,.2f}K")
+
+# #nigeria festival info.
+# festival_info ={
+# "festival ":input("what is the festival name: ").strip(),
+# "location_festival": input("location of festival: ").strip(),
+# "month_held": input("what month was it held: ").strip()
+# }
+
+
+# print(f"the '{festival_info['festival ']}\' festival is held at {festival_info['location_festival']} on {festival_info['month_held']} every year.")
+
+#school fees breakdown.
+
+# school_fees_breakdown = {
+#     "school_name": input("what is the name of your school: ").strip(),
+#     "tuition_fee": float(input("what is the tuition fee: ").strip()),
+#     "hostel_fee": float(input("hostel fee price is what: ").strip()),
+#     "feeding fee": float(input("how much is feeding fee: ").strip())
+# }
+
+# total_school_fees = school_fees_breakdown["tuition_fee"] + school_fees_breakdown["hostel_fee"] + school_fees_breakdown["feeding fee"]
+
+# print(f"Total School Fee for Students at {school_fees_breakdown['school_name']} high school: ")
+# print("-" * 40)
+# print(f"Tuition Fee: N{school_fees_breakdown['tuition_fee']:,.2f}K")
+# print(f"Hostel Fee: N{school_fees_breakdown['hostel_fee']:,.2f}K")
+# print(f"Feeding Fee: N{school_fees_breakdown['feeding fee']:,.2f}K")
+
+#nigerian currency converter (advanced)
+
+# nigerian_currency_converter ={
+#     "amount_in_naira": float(input("amount in naira: ")),
+#     "exchange_rate_in_dollars": float(input("what is your exchange rate for dollars: ")),
+#     "exchange_rate_in_pounds": float(input("what is your exchange rate for pounds: "))
+# }
+# amount_in_dollars = nigerian_currency_converter["amount_in_naira"]/nigerian_currency_converter["exchange_rate_in_dollars"]
+# amount_in_pounds = nigerian_currency_converter["amount_in_naira"]/nigerian_currency_converter["exchange_rate_in_pounds"]
+
+# print("NIGERIAN CURRENCY CONVERTER:")
+# print("-" * 40)
+# print(f"Amount in Naira: N{nigerian_currency_converter['amount_in_naira']:,.2f}K")
+# print(f"Amount in Dollars: ${amount_in_dollars:,.2f}")
+# print(f"Amount in pounds: E{amount_in_pounds:,.2f}")
+
+
+#simulated ussd menu interaction.
+
+user_program = ()
