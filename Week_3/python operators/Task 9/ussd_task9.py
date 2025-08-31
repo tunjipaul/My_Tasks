@@ -13,6 +13,7 @@ while True:
          option = int(input("OTP USSD PLATFORM!\n-Choose an option below.\n1.Check Balance\n2.Buy Airtime\n3.Buy Data\n4.Exit\nInput No: ").strip())
          if option == 1:
              print(f"{name} your bank balance is N{balance:,.2f}")
+             break
              
          if option == 2:
              price = int(input("How much airtime do you want to buy: ").strip())

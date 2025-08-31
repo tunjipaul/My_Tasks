@@ -137,4 +137,7 @@
 
 #simulated ussd menu interaction.
 
-user_program = ()
+# code= input("dial a USSD code: ").strip(),
+# menu = ("1.check balance\n2.buy airtime\n3.buy data"),
+# choice = input("select between 1, 2, 3: ")
+

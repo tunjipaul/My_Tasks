@@ -1,13 +1,20 @@
-#module/first.py
-def add(a,b):
-    return a+b
+# my_module/first.py
 
-def subtract(a,b):
-    return a-b
-def multiply(a,b):
-    return a*b
-def divide(a,b):
-    if b!= 0:
-        return a/b
+def add(a, b):
+    return a + b
+
+
+def subtract(a, b):
+    return a - b
+
+
+def multiply(a, b):
+    return a * b
+
+
+def divide(a, b):
+    if b != 0:
+        return a / b
     else:
-        return "cannot divide by zero"
+        return "Cannot divide by zero"
+    
