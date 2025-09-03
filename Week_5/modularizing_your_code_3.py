@@ -135,9 +135,72 @@ class student:
            return f"{self.name}'s CGPA is now {self.cgpa:.2f}"
        else:
         return "no grades provided"
+    
 
 #using methods 
 abiodun = student("abiodun akinola", "gistology", 600)
 print(abiodun.pay_school_fees())
 print(abiodun.register_courses())
 print(abiodun.calculate_cgpa(grades= [4.2, 3.8, 4.0, 4.52]))
+
+#types of methods.
+#instance methods - work with specific data objects.
+
+#self refers to the specific student.
+def pay_school_fees(self):
+    return f"{self.name} has paid school fees"
+
+#2. class methods - work with class-level data.
+@classmethod
+def get_university(cls):
+    return cls.university
+
+
+#3. static methods - don't need object or class data.
+@staticmethod
+def academic_calendar():
+    return "academic session runs from september to july"
+
+#how attributes and methods work together.
+
+#- the relationship
+#attributes store the data.
+#methods use and modify that data.
+
+class BankAccount:
+    def __init__(self, owner, bank_name, balance = 0):
+        #attributes, what the account has
+        self.owner = owner
+        self.bank_name = bank_name
+        self.balance = balance
+        self.account_number = self.generate_account_number()
+        #methods - what the account can do
+    def deposit(self, amount):
+            """add money to the account"""
+            if amount > 0:
+                self.balance += amount #method changes attribute
+                return f"N{amount:,} deposited to {self.owner}'s {self.bank_name} account. New balance: N{self.balance:,}"
+            return "Invalid deposit amount"
+    def withdraw(self, amount):
+            """Remove money from the account"""
+            if amount > 0 and amount <= self.balance:
+                self.balance -= amount #method changes attribute
+                return f"N{amount:,} withdrawn from {self.owner}'s account. New balance: N{self.balance:,}"
+            return "insufficient funds or invalid amount"
+    def transfer(self, amount, recipient):
+        """Transfer money to another account"""
+        if amount > 0 and amount <= self.balance:
+            self.balance -= amount
+            return f"N{amount:,} transferred from {self.owner} to {recipient}. Remaining Balance: N{self.balance:,}"
+        return "Transfer Failed: Insufficient Funds"
+    
+    def check_balance(self):
+        """Check current balance"""
+        return f"{self.owner}'s {self.bank_name} account balance: N{self.balance:,}"
+    
+    def generate_account_number(self):
+        """generate a unique account number"""
+        import random
+        return f"01{random.randint(10000000,99999999)}"
+
+    
